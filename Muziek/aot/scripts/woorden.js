@@ -156,6 +156,7 @@ if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {
     // 
 } else if (navigator.getAutoplayPolicy("mediaelement") === "allowed-muted") {
   // Mute the video so it can autoplay.
+autoplaytekstdiv.innerText = 'verleen toegang tot muziek afspelen in je browser voor prachtige klanken'
 } else {
 	autoplaytekstdiv.innerText = 'verleen toegang tot muziek afspelen in je browser voor prachtige klanken'
   // Autoplay disallowed.
