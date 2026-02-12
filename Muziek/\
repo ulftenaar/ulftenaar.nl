@@ -1,0 +1,33 @@
+body{
+background-color: darkgrey;
+}
+
+
+.titel{
+    mix-blend-mode: soft-light;
+    color: black; 
+    text-align: center; 
+    font-family: "mijnFont";
+    flex: 1;
+    font-size: clamp(2rem, 4vw, 5rem);
+    padding: 2rem;
+    max-width: max( 70%, 500px);
+}
+
+.ondertitel {
+font-size: smaller;
+}
+
+.denkenCont {
+display: flex;
+height: 100vh;
+justify-content: center;
+}
+
+
+@font-face {
+    font-family: "mijnfont";
+    src: url(../ayuthaya-regular.ttf);
+}
+
+

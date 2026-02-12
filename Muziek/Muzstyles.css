@@ -1,0 +1,148 @@
+:root {
+--grijsblauw: rgb(56, 73, 86);
+}
+
+body{
+background: radial-gradient(at 0% 100%, rgb(56, 73, 86), darkgrey 80%);
+font-family:" mijnFont";
+}
+
+
+
+.titel{
+    mix-blend-mode: soft-light;
+    color: black; 
+    text-align: left; 
+    font-family: "mijnFont";
+    flex: 1;
+    font-size: clamp(2rem, 4vw, 5rem);
+    min-width: 300px;
+    max-width: max( 70%, 700px);
+    text-transform: uppercase;
+}
+
+
+
+.titel_g{
+    mix-blend-mode: soft-light;
+    color: black; 
+    padding:1rem;
+    text-align: center; 
+    font-family: "mijnFont";
+    flex: 1;
+    font-size: clamp(2rem, 4vw, 5rem);
+    width: 90vw;
+    text-transform: uppercase;
+}
+
+
+.ondertitel {
+font-size: smaller;
+text-align: right;
+color: darkgreen;
+padding-right:2rem;
+}
+
+.denkenbio {
+font-size: max(0.8rem, 1.5vw);
+padding: 0 2rem 1rem 0;
+flex:0.7;
+text-transform: None;
+}
+
+
+.denkenbio_k {
+font-size: max(0.8rem, 1.2vw);
+padding: 0 2rem 1rem 0;
+flex:0.9;
+text-transform: None;
+}
+.denkenCont {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+
+padding: 2rem 2rem 1rem 2rem;
+}
+
+.denkenfot {
+flex: 1;
+align-self: center;
+min-width: 500px;
+aspect-ratio:1/1;
+
+}
+.denkenfot img{
+object-fit:cover;
+}
+
+
+.denkenTekst{
+  font-family: "mijnFont";
+  text-align: center;
+  padding: 0rem 2rem 0 2rem;
+  letter-spacing: -1px;
+  word-spacing: -2px;
+  mix-blend-mode: soft-light;
+  flex:2;
+  min-width: 300px;
+}
+
+.denkenIndex {
+  font-family: "mijnFont";
+  text-align: left;
+  padding: 0rem 2rem 0 2rem;
+  letter-spacing: -1px;
+  word-spacing: -2px;
+  mix-blend-mode: hard-light;
+  flex:1;
+  min-width: 300px;
+}
+  ol {
+ font-family: "mijnFont";
+ mix-blend-mode: soft-light;
+  
+color: var(--grijsblauw);
+  }
+
+
+.denkenMedia {
+  img{ 
+  aspect-ratio:1/1;
+  object-fit: cover;
+  min-width: 300px; 
+  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+}
+
+
+
+@font-face {
+    font-family: "mijnFont";
+    src: url(../ayuthaya-regular.ttf);
+}
+
+a{
+color: var(--grijsblauw);
+mix-blend-mode: soft-light;
+text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+  mix-blend-mode: normal;
+}
+
+li :hover{
+  text-decoration: underline;
+  mix-blend-mode: normal;
+}
+
+.denkenTekst a.active {
+font-weight: bold;
+
+}

@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  font-family: regularFont;
+  color: darkblue;
+  max-width: 100vw;
+}
+
+.scroll{
+  scroll-snap-type: y mandatory;
+height: 100vh;
+  overflow: hidden scroll;
+}
+
+.scrollable {
+  scroll-snap-align: start;
+  scroll-margin: 5vh;
+}
+
+.blendmode {
+  mix-blend-mode: color-burn;
+}
+
+.achtergrondVideo {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  position:fixed;
+  top: 0;
+  z-index: -2000;
+
+  & video {
+    object-fit: cover;
+  }
+}
+
+.landingPage {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh ;
+  gap: clamp(1rem, 4vh, 3rem);
+  visibility: hidden;
+  display: none;
+}
+
+.stopmuziek {
+  color: white;
+}
+
+.fotopage {
+height: 100vh;
+  display: flex;
+  flex-wrap: wrap-reverse;
+
+  & .fotodeel {
+    display: flex;
+    flex-direction: row;
+    z-index: -10;
+    max-height: 100vh;
+    max-width: 100vw;
+    mix-blend-mode: hard-light;
+
+    /* position: static; */
+
+    & img {
+      object-fit: contain;
+    }
+
+    & #statischachtergrond {
+      position: relative;
+
+      /* top:100vw; */
+      z-index: 4;
+
+      /* left: 40vw; */
+
+      /* max-width: 40vw; */
+    }
+
+    & #varachtergrond {
+      flex: 2;
+      position: relative;
+
+      /* left: 40vw; */
+
+      /* right: 0vw; */
+    }
+  }
+
+  & .tekstdeel {
+    flex: 1;
+  }
+
+  & .woorden {
+    top: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    text-alig-webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */n: center;
+  }
+
+  & .woord, .woordclick {
+    position: relative;
+    mix-blend-mode: color-dodge;
+    display: inline;
+    color: #c2943c73;
+  }
+
+  & .woord:hover {
+    color: darkred;
+    cursor: pointer;
+  
+  }
+
+  & .woordclick {
+    color: white;
+    background-color: darkblue;
+    padding: 10px;
+  }
+
+   & .woordclick:hover{
+      color: darkgreen;
+    background-color: white;
+    cursor: pointer;
+    }
+
+  & .vartekst_container{
+    position: absolute;
+    display: inline-block;
+    height: 100vh;
+    background-color:darkblue;
+    padding: clamp(1rem, 3vw, 2rem);
+    left: 30vw;
+    z-index: 1000;
+    mix-blend-mode: soft-light;
+  }
+
+  & .vartekst_container:hover {
+    mix-blend-mode: hard-light;
+  }
+
+  & .vartekst {
+    line-height: 1.2rem;
+    top: 30vh;
+    position: relative;
+    mix-blend-mode:normal
+      ;
+    display: inline;
+    color: white;
+    font-style: italic;
+
+    /* top: 10vh; */
+
+    /* left: 10vh; */
+
+    /* background-color: black; */
+
+    /* height: 100vh; */
+  }
+}
+
+
+
+.stopmuziek{
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+}
+
+#stopmuziekknop:hover{
+  color: red;
+  cursor: pointer;
+
+}
+
+h1, h2, h3 {
+  font-family: titelFont;
+  padding: 0;
+  margin: 0;
+} 
+
+h1 {
+  font-size: clamp(2rem, 8vw, 6rem);
+}
+
+h2 {
+  font-size: clamp(1rem, 5vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+@font-face {
+  font-family: titelFont;
+  src: url("../../ayuthaya-regular.ttf");
+}
+
+@font-face {
+  font-family: regularFont;
+  src: url("../../Fonts/Lato-Medium.ttf");
+}
