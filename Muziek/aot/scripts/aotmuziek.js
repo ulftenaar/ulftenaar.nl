@@ -20,7 +20,6 @@ button.addEventListener ('click', () => {
 		// console.log('ho')
 	}
 	else {
-		console.log('hey!');
 		startsong();
 	}
 })

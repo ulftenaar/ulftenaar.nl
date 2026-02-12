@@ -142,7 +142,7 @@ height: 100vh;
   }
 
   & .vartekst {
-    line-height: 1.2rem;
+    /* line-height: 1.2rem; */
     top: 30vh;
     position: relative;
     mix-blend-mode:normal
@@ -151,6 +151,7 @@ height: 100vh;
     color: white;
     font-style: italic;
 
+    font-size: clamp(0.5rem, 2vw, 1rem);
     /* top: 10vh; */
 
     /* left: 10vh; */

@@ -52,10 +52,12 @@ const vartekstcontainer = document.querySelector('.vartekst_container')
 let audiorand = 0;
 const muziekteller = document.querySelector('#muziekteller')
 const muzieklengte = document.querySelector ('#muzieklengte')
+const autoplaytekstdiv = document.querySelector('#stopmuziekknop')
 
 wisselwoorden();
 scandiv();
 audiohover();
+    checkautoplay();
 // verandertekst ();
 vartekstcontainer.style.visibility = 'hidden'
 
@@ -76,6 +78,7 @@ for (i=0;i<woorden.length; i++) {
 		}
         scandiv();
 	audiohover();
+    checkautoplay();
 }
 }
 
@@ -115,6 +118,7 @@ function handleClick() {
   veranderachtergrond();
   verandertekst();
   counterfunc();
+  checkautoplay();
   audiochange.loop = false;
   
 // Source - https://stackoverflow.com/a/9346630
@@ -144,4 +148,18 @@ function counterfunc() {
 // var x = document.querySelector('#achtergrondmuziek').duration 
 muziekteller.innerText = `${audiorand+1}/${audiosrc.length}`
 // muzieklengte.innerText = x
+}
+
+function checkautoplay() {
+if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {
+ 	autoplaytekstdiv.innerText = 'stop de muziek' // Do nothing. The content can autoplay.
+    // 
+} else if (navigator.getAutoplayPolicy("mediaelement") === "allowed-muted") {
+  // Mute the video so it can autoplay.
+} else {
+	autoplaytekstdiv.innerText = 'verleen toegang tot muziek afspelen in je browser voor prachtige klanken'
+  // Autoplay disallowed.
+	
+  // Add a play button to the video element.
+}
 }
