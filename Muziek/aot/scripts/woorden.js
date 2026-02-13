@@ -53,11 +53,16 @@ let audiorand = 0;
 const muziekteller = document.querySelector('#muziekteller')
 const muzieklengte = document.querySelector ('#muzieklengte')
 const autoplaytekstdiv = document.querySelector('#stopmuziekknop')
+const klikdiv = document.querySelector('.klikhier_container')
 
 wisselwoorden();
 scandiv();
 audiohover();
     checkautoplay();
+klikhier();
+audiochange.muted=true;
+autoplaytekstdiv.style.visibility='hidden';
+div.style.display='none';
 // verandertekst ();
 vartekstcontainer.style.visibility = 'hidden'
 
@@ -149,18 +154,27 @@ function counterfunc() {
 muziekteller.innerText = `${audiorand+1}/${audiosrc.length}`
 // muzieklengte.innerText = x
 }
-
+//
 function checkautoplay() {
-if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {
- 	autoplaytekstdiv.innerText = 'stop de muziek' // Do nothing. The content can autoplay.
-    // 
-} else if (navigator.getAutoplayPolicy("mediaelement") === "allowed-muted") {
-  // Mute the video so it can autoplay.
-autoplaytekstdiv.innerText = 'verleen toegang tot muziek afspelen in je browser voor prachtige klanken'
-} else {
-	autoplaytekstdiv.innerText = 'verleen toegang tot muziek afspelen in je browser voor prachtige klanken'
-  // Autoplay disallowed.
-	
-  // Add a play button to the video element.
+// if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {
+//  	autoplaytekstdiv.innerText = 'stop de muziek' // Do nothing. The content can autoplay.
+//     // 
+// } else if (navigator.getAutoplayPolicy("mediaelement") === "allowed-muted") {
+//   // Mute the video so it can autoplay.
+// autoplaytekstdiv.innerText = 'verleen toegang tot muziek afspelen in je browser voor prachtige klanken'
+// } else {
+// 	autoplaytekstdiv.innerText = 'verleen toegang tot muziek afspelen in je browser voor prachtige klanken'
+//   // Autoplay disallowed.
+//
+//   // Add a play button to the video element.
+// }
 }
+
+function klikhier() {
+  klikdiv.addEventListener('click', function() {
+    klikdiv.style.display='none';
+    audiochange.muted=false
+div.style.display='block'
+    autoplaytekstdiv.style.visibility='visible'
+  })
 }
