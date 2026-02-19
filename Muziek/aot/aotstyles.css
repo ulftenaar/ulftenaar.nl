@@ -3,6 +3,12 @@ body {
   font-family: regularFont;
   color: darkblue;
   max-width: 100vw;
+  scrollbar-color: #8eb0dc #00000047;
+}
+
+html {
+    overflow-y: scroll;
+
 }
 
 .scroll{
@@ -146,18 +152,6 @@ height: 100vh;
   }
 }
 
-/* @media only screen and (max-width: 600px) { */
-
-/*  .witgedicht, #feniks, .witachtergrond, .witsectie { */
-
-/*     height: 200vh; */
-
-/*     max-height: 200vh; */
-
-/*   } */
-
-/* } */
-
 .witsectie {
   position: relative;
 
@@ -172,8 +166,6 @@ height: 100vh;
     overflow: hidden;
     object-fit: cover;
     height: 100vh;
-
-
   }
 
  & .witgedicht {
@@ -199,7 +191,7 @@ height: 100vh;
 
 & .witfoto {
     mix-blend-mode: color-burn;
-    width: 30vw;
+    height: 30vh;
     position: absolute;
     z-index: -2;
     right: 10vw;
@@ -238,6 +230,21 @@ width: 100vw;
   padding: 1rem;
 }
 
+.pijl {
+  position: absolute;
+  z-index: 300;
+  right: 0;
+  bottom: 0;
+  font-size: 2rem;
+  padding: 1rem;
+  color: white;
+ 
+}
+
+  .pijl:hover{
+    color: darkred;
+  cursor: pointer;
+  }
 #stopmuziekknop:hover{
   color: red;
   cursor: pointer;
@@ -270,4 +277,9 @@ h3 {
 @font-face {
   font-family: regularFont;
   src: url("../../Fonts/Lato-Medium.ttf");
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
