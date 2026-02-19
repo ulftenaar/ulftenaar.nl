@@ -8,9 +8,7 @@
   </head>
   <body>
     <div class="scroll">
-      <div class="klikhier_container">
-        <div class="klikhier">klik hier voor muziek!!</div>
-      </div>
+      <div class="klikhier_container"> <div class="klikhier">klik hier voor muziek!!</div> </div>
       <section class="scrollable">
         <div class="blendmode">
           <div class="landingPage">
@@ -44,7 +42,124 @@
         </div>
       </section>
 
+      <section class="scrollable" id="feniks">
+        <div class="witsectie">
+          <div class="witgedicht">
+            <h2>feniks ? dec</h2>
+            <p> 
+            er wordt zes keer keihard op mijn deur geklopt <br>
+            trillend doe ik open <br>
+            het is een oranje, rode, <br>
+            gigantische vlam met vleugels
+            </p>
+            <p>het is een feniks</p>
+            <p>
+            ik sta daar met mijn mond open <br>
+            ik bevries <br>
+            ik doe niets meer <br>
+            </p>
+            <p>
+              voor 29 dagen en 29 nachten <br>
+              sta ik daar <br>
+              oog in oog met dat wezen <br>
+            </p>
+            <p>
+              in doodse stilte
+            </p>
+            <p>
+              met al mijn macht hoopte ik dat het beest zou verdwijnen <br>
+              maar de furie bleef, <br>
+              ook de feniks veroerde geen vin
+              ik had nog nooit zoeits gevoeld
+            </p>
+            <p>
+              op de 30e dag verbrak de feniks onze stilte <br>
+              het zei dat ik nog drie dagen te leven had <br>
+              voordat het me tot aarde terug zou brengen, <br>
+              en me van deze wereld zou vegen, <br>
+              met &eacute;&eacute;n rake klap van de rechterklauw
+            </p>
+            <p>tenzij ik mezelf voor 29 dagen en 29 nachten <br>
+              in de spiegel kon kijken
+            </p>
+            <p>
+              ik ging op mijn knie&euml; <br>
+              en ik smeekte de godheid om genade <br>
+              ik zou alles doen, behalve dat
+            </p>
+            <p>
+              ik jammerde zoals ik dat nog nooit eerder gedaan had <br>
+              de tranen vloeiden, verdampten in de hitte <br>
+              en toen ik na een eeuwigheid opkeek <br>
+              was de feniks verdwenen
+            </p>
+            <p>
+              ik jammerde zoals ik dat nog nooit eerder gedaan had <br>
+              de tranen vloeiden, verdampten in de hitte <br>
+              en toen ik na een eeuwigheid opkeek <br>
+              was de feniks verdwenen <br>
+              er waren ook nergens meer sporen te bekennen <br>
+              van die levende, ondragelijke vlam <br>
+              zelfs mijn wenkbrauwen groeide terug <br> 
+              het was alsof die er nooit geweest was
+            </p>
+            <p>
+              voor twee dagen en twee nachten <br>
+              leefde ik precies als voorheen <br>
+              het moest immers een droom zijn geweest
+            </p>
+            <p>
+              totdat ik op de derde dag <br>
+              mijn wenkbrouwen verloren was
+            </p>
+            <p> 
+              dit kon niet waar zijn <br>
+              de feniks wist mijn enige zwakte <br>
+              ik riep de hele dag hoe <br>
+              terwijl ik mijn nachtmerrie uitstelde
+            </p>
+            <p>
+              die nacht vielen alle haren mijn hoofd uit <br>
+              en ik zei hoe steeds minder vaak <br>
+              de feniks had me <br>
+              de feniks had gewonnen
+            </p>
+            <p>
+              ik vertrok met een stoel in de ene <br>
+              en een spiegel in de andere hand <br>
+              ik liep in &eacute;&eacute;n rechte lijn naar het noorden <br>
+              zonder &eacute;&eacute;n keer om te kijken
+            </p>
+            <p>
+              ik zei hoe steeds minder vaak <br>
+              en vlak voor de zon opkwam <br>
+              op de vierde nacht <br>
+              vond ik een meer <br>
+              ik had nog nooit zoeits moois gezien
+            </p>
+            <p>
+              ik zette mijn stoel en spiegel neer <br>
+              ik ging zitten, nam een diepe zucht <br>
+              voor 29 dagen en 29 nachten zou ik hier sterven
+            </p>
+            <p>
+              ik zei hoe voor de laatste keer <br>
+              en ik deed mijn ogen open
+            </p>
+            
+          </div>
+          <div class="witfoto">
+            <img src="Media/fotos/witachtergrond/1.jpg" alt="" height="100%" width="100%" id="witfotoid">
+          </div>
+          <div class="witachtergrond">
+
+            <img src="Media/fotos/witachtergrondsamen.png" alt="" height="100%" width="100%" >
+        </div>
+      </section>
+
       <div class="stopmuziek">
+        <div class="muziekteller" id="feniksteller"></div>
+        <div class="muziekteller" style="visibility: hidden;" id="fenikslengte">51</div>
         <div class="muziekteller" id="muzieklengte"></div>
         <div class="muziekteller" id="muziekteller"></div>
         <div id="stopmuziekknop">stop de muziek</div>
@@ -65,8 +180,21 @@
         loop
         id="achtergrondmuziek"
       ></audio>
+    <audio src="Media/audio/aotdemos/duszegradio.wav"
+        muted
+        autoplay
+      loop
+      id="feniksmuziek">
+      </audio>
+
+    <audio src="" muted
+      autoplay
+      id="feniksfoley">
+      </audio>
       <script src="scripts/aotmuziek.js" c></script>
       <script src="scripts/woorden.js"></script>
+      <script src="scripts/preload.js"></script>
+      <script src="scripts/feniks.js"></script>
     </div>
   </body>
 </html>
