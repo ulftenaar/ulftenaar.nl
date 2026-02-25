@@ -3,12 +3,14 @@ body {
   font-family: regularFont;
   color: darkblue;
   max-width: 100vw;
-  scrollbar-color: #8eb0dc #00000047;
+  /* scrollbar-color: #8eb0dc #00000047; */
 }
 
 html {
     overflow-y: scroll;
 
+    text-alig-webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */n: center;
 }
 
 .scroll{
@@ -50,7 +52,31 @@ height: 100vh;
   gap: clamp(1rem, 4vh, 3rem);
   /* visibility: hidden; */
   display: flex;
+
+
+  .album_description {
+    flex: 2;
+    min-width: min(500px, 90vw);
+    font-size: clamp(0.7rem, 2rem, 2vw);
+  }
+  .album_foto {
+    flex:1;
+    min-width: 30vw
+  }
+
 }
+#land_description {
+  flex-direction: row;
+  gap: 2rem;
+    padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.landingPage :hover {
+  color: darkred;
+  cursor: pointer;
+}
+
 
 .stopmuziek {
   color: white;

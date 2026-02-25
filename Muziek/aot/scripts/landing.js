@@ -1,8 +1,9 @@
 land_description = document.querySelector('#land_description')
 land_titel = document.querySelector('#land_titel')
 c_land= document.querySelector('#c_land')
-var state = true
-
+var state = true 
+// check();
+// klikhier();
 c_land.addEventListener('click', () => {
 	state = !state;
 	check();

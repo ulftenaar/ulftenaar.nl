@@ -172,6 +172,7 @@ function checkautoplay() {
 
 function klikhier() {
   klikdiv.addEventListener('click', function() {
+    land_titel.style.visibility='visible'
     klikdiv.style.display='none';
     audiochange.muted=false
 div.style.display='block'
