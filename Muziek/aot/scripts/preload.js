@@ -1,1 +1,1 @@
-document.getElementByID("achtergrondmuziek").preload;
+document.getElementById("achtergrondmuziek").preload;

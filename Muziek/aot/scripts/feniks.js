@@ -41,6 +41,7 @@ function kiesgeluid() {
 audiofeniksfoley.addEventListener("ended",kiesgeluid, false);
 
 function kiesfoto() {
+	witfotoid.style.display='block'
 		var randint = (Math.floor(Math.random()*12)+1)
 	witfotoid.src=`Media/fotos/witachtergrond/${randint}.jpg`
 }
