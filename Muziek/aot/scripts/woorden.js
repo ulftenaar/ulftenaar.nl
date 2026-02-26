@@ -177,5 +177,6 @@ function klikhier() {
     audiochange.muted=false
 div.style.display='block'
     autoplaytekstdiv.style.visibility='visible'
+    check();
   })
 }
