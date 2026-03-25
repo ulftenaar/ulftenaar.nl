@@ -1,0 +1,49 @@
+.frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 6rem);
+  min-height: 500px;
+  padding: 3rem;
+}
+
+.welkom {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.beschrijvingg {
+  text-align: center;
+}
+
+.titel {
+  flex-direction: row;
+}
+
+hr {
+  mix-blend-mode: normal;
+  border-top: 5px solid darkblue;
+  visibility: visible;
+  width: 100%;
+}
+
+.fotomenu {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 2em;
+
+}
+
+.fotomenuu {
+  font-family: titelFont;
+  color: darkblue;
+}
+
+.fotomenuu:hover {
+  color: darkred;
+  cursor: pointer;
+}
