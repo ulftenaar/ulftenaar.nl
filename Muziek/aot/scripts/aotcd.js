@@ -70,10 +70,11 @@ menus.forEach((menu, index) => {
 	contents.forEach((content, i) => {
 		content.style.display="none"
 	})
-	contents[0].style.display="flex"
+	contents[2].style.display="flex"
   menu.addEventListener('click', () => {
     contents.forEach((content, i) => {
-      content.style.display = (i === index) ? "flex" : "none";
+      content.style.display = (i === index) ? "block" : "none";
+
     });
   });
 }); 	
