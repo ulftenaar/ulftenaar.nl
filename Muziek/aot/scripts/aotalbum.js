@@ -16,8 +16,12 @@ let albumplaying = false;
 sections[0].scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 playalbum();
 
+// window.onbeforeunload = function (e) {
+//         return "weet je het zeker?";
+//     };
+
 function playsong () {
-  // albumaudio.src=`https://file.ulftenaar.nl/aot/Albumaot/${songs[songindex]}.wav`;
+  albumaudio.src=`https://file.ulftenaar.nl/aot/Albumaot/${songs[songindex]}.wav`;
   info_nummer.innerText=`speelt nu: ${songindex+1}: ${songs[songindex]}`;  
   sections[songindex+1].scrollIntoView();
 }

@@ -15,14 +15,12 @@
   align-items: center;
   color: whitesmoke;
   mix-blend-mode: color-dodge;
+  padding: 3rem;
   
-
   & span {
     cursor: pointer;
     font-size: clamp(1rem,1.3vw, 2rem);
   }
-
-  
 
   & #info_nummer {
     position: absolute;
@@ -33,6 +31,9 @@
       color:#00c0ff;
     mix-blend-mode: hard-light;
   }
+}
+.playermenu:hover {
+  background-color: #ffffff4f;
 }
 
 #landvideo {
@@ -47,15 +48,17 @@
 .achtergrondFoto{
   height: 100vh;
   width: 100vw;
-  object-fit: contain;
   position: absolute;
   z-index: -2;
+  & img{
+  object-fit: cover;
+  }
 }
 
 .mediavideo {
   position: absolute;
   z-index: -1;
-  mix-blend-mode: color-burn;
+  mix-blend-mode: soft-light;
   height: 100vh;
 
   & video {
@@ -64,6 +67,31 @@ border-radius: 1px;
     width: 100%;
   object-fit: cover;
   }
+
+  & img {
+  object-fit: cover;
+  }
+  
+
+}
+
+.randommedia {
+  position: absolute;
+    object-fit: cover;
+
+  & img {
+    object-fit: cover;
+  }
+  & video {
+    object-fit: cover;
+  }
+}
+
+.media{
+  position: absolute;
+  width: 100vw;
+
+  height: 100vh;
 }
 
 
@@ -85,6 +113,7 @@ color: white;
 display: flex;
 flex-wrap: wrap;
   gap: 3rem;
+  padding: 2rem;
 }
 
 #sec2 {
