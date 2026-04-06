@@ -1,17 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
- <div id="songtitel"></div> 
- <span id="knop_prev">terug</span>
- <span id="knop_stop">stop</span>
- <span id="knop_pause">pauzeer</span>
- <span id="knop_next">verder</span>
-  <audio src="" id="albumaudio" autoplay></audio>
-  <script src="scripts/aotalbum.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="aotalbum.css" />
+    <link rel="stylesheet" href="aotstyles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+      <section class="sectie" id="sec0">
+        <video
+          id="landvideo"
+          height="100%"
+          width="100%"
+          src="Media/video/achtergrondvideo.mov"
+          autoplay
+          loop
+          muted
+        ></video>
+        <div class="startalbum">
+          <span id="knop_startalbum">Start het album</span>
+        </div>
+      </section>
+    <!-- NOTE: dus zeg dan niet dat -->
+    <section class="sectie" id="sec1">
+
+      <div class="achtergrondFoto"><img src="Media/albumachtergrond/duszegdannietdatjenogvanmehoudt.jpg" alt="" width="100%" height="100%"></div>
+
+        <div class="mediavideo">
+            <video src="Media/video/duzegdannietdatjenogvanmehoudt.MOV" autoplay muted loop height="100%" width="100%"></video>
+        </div>
+      <div class="tekstsectie">
+      <div class="songtekst">
+        ... <br>
+        onder de maan <br>
+        leerde ik je kennen <br>
+        en onder de sterren<br>
+        liet ik je gaan<br>
+        als ik het ondenkbare doe<br>
+        en je laat gaan<br>
+        nee zeg dan niet dat<br>
+        je van me houdt<br>
+        zeg dan niet dat<br>
+        je nog van me houdt<br>
+        ik gaf je de sterren<br>
+        jij me de maan<br>
+        was ik het waard<br>
+        alle tranen<br>
+        zou je het nog eens doen<br>
+        ik liet je gaan<br>
+      </div>
+
+      <div class="infotekst">
+      Dit liedje was het begin in het album, het is een gevangen performance op 21 december in de avond, nadat er iets heel belangrijks was gebeurd. Het was de start van het album.
+        <p>Het lied is geschreven eind september, en zat al die tijd in me gepropt. Het eruit laten was een verademing,</p>
+      </div>
+
+    </section>
+
+  <!-- NOTE: Kast -->
+  <section class="sectie" id="sec2">
+
+    <div class="achtergrondFoto"><img src="Media/Albumachtergrond/kast.jpg" width="100%" height="100%" alt=""></div>
+      <div class="tekstsectie">
+        <div class="songtekst">
+          
+
+          nu ik mijn kast van jouw spullen ontdaan heb<br>
+          heb ik eindelijk een plank vrij <br>
+          zonder twijfelen stopte ik jouw spullen in een tas<br>
+          en begon ik ijverig met het vullen van die lege plank<br>
+          <p>
+          Het werd een stapel oude kleding<br>
+          en wat boeken met jouw naam erop<br>
+          die ik van uitpuilende lades verzamelde<br>
+          en haastig op die lege plank legde<br>
+          </p>
+          <p>
+          ik kijk ernaar en ik vraag me af <br>
+          wat je met mijn plank spullen hebt gedaan<br>
+          zijn ze al in een tas geprotp<br>
+          of klamp je je eraan vast<br>
+          en ruik je er stiekem aan <br>
+          </p>
+          <p>
+          dan kijk ik naar die tas met jouw plank spullen<br>
+          die ik toen aarzelend in een hoek legde<br>
+          en besef ik me<br>
+          dat ik die daar voorlopig nog liever even laat liggen<br>
+          <p>
+        </div>
+        <div class="infotekst"></div>
+      </div>
+    </section>
+
+    <section class="sectie" id="sec3"></section>
+    <section class="sectie" id="sec4"></section>
+    <section class="sectie" id="sec5"></section>
+    <section class="sectie" id="sec6"></section>
+    <section class="sectie" id="sec7"></section>
+    <section class="sectie" id="sec8"></section>
+    <section class="sectie" id="sec9"></section>
+    <section class="sectie" id="sec10"></section>
+
+    <div class="playermenu">
+      <span id="knop_prev">terug</span>
+      <span id="knop_stop">stop</span>
+      <span id="knop_pause">pauzeer</span>
+      <span id="knop_next">verder</span>
+      <div id="info_nummer"></div>
+    </div>
+    <audio
+      src="Media/audio/aotdemos/12jangit.wav"
+      id="albumaudio"
+      autoplay
+    ></audio>
+    <script src="scripts/aotalbum.js"></script>
+  </body>
 </html>

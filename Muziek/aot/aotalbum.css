@@ -1,0 +1,94 @@
+
+.sectie {
+  height: 100vh;
+ scroll-snap-align: start;
+}
+
+
+.playermenu{
+  position:fixed;
+  display: none;
+  bottom: clamp(1rem,1.3vw, 2rem);
+  width: 100vw;
+  gap: clamp(1rem,1.3vw, 2rem);
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  mix-blend-mode: color-dodge;
+  
+
+  & span {
+    cursor: pointer;
+    font-size: clamp(1rem,1.3vw, 2rem);
+  }
+
+  
+
+  & #info_nummer {
+    position: absolute;
+    left: clamp(1rem,1.3vw, 2rem);;
+  }
+
+    & span:hover{
+      color:#00c0ff;
+    mix-blend-mode: hard-light;
+  }
+}
+
+#landvideo {
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: absolute;
+  z-index: -2;
+}
+
+.achtergrondFoto{
+  height: 100vh;
+  width: 100vw;
+  object-fit: contain;
+  position: absolute;
+  z-index: -2;
+}
+
+.mediavideo {
+  position: absolute;
+  z-index: -1;
+  mix-blend-mode: color-burn;
+  height: 100vh;
+
+  & video {
+border-radius: 1px;
+    height: 100%;
+    width: 100%;
+  object-fit: cover;
+  }
+}
+
+
+.songtekst {
+  position: relative;
+font-size: clamp(1rem, 1.5vw, 3rem);
+}
+
+.infotekst {
+  text-wrap:wrap ;
+  max-width: 50vw;
+  font-size: clamp(1rem, 1.5vw, 3rem);
+}
+
+.tekstsectie {
+position: relative;
+mix-blend-mode:overlay;
+color: white;
+display: flex;
+flex-wrap: wrap;
+  gap: 3rem;
+}
+
+#sec2 {
+  .songtekst {
+    left: 30vw;
+  }
+}

@@ -8,6 +8,7 @@ body {
 
 html {
     overflow-y: scroll;
+  overflow-x: hidden;
 
     text-alig-webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */n: center;

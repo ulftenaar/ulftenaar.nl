@@ -1,31 +1,51 @@
 const songtitel = document.querySelector('#songtitel');
 const albumaudio = document.querySelector('#albumaudio')
 let songs = ['duszegdannietdatjenogvanmehoudt', 'kast','24nov25', 'slaapzacht', 'landen', 'hoehetwasomvanjetehouden','blauw','alswesamenbeterzijn','vaarwel','visophetdroge']
-let songindex = 0;
 const knop_prev = document.querySelector('#knop_prev');
 const knop_stop = document.querySelector('#knop_stop');
 const knop_pause = document.querySelector('#knop_pause');
 const knop_next = document.querySelector('#knop_next');
+const knop_startalbum = document.querySelector('#knop_startalbum')
+const info_nummer = document.querySelector('#info_nummer');
+const playermenu = document.querySelector('.playermenu');
+const sections = document.querySelectorAll('[id^="sec"]')
+
+let songindex = 0;
+let albumplaying = false;
+
+sections[0].scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+playalbum();
 
 function playsong () {
-  albumaudio.src=`https://file.ulftenaar.nl/aot/Albumaot/${songs[songindex]}.wav`;
-
+  // albumaudio.src=`https://file.ulftenaar.nl/aot/Albumaot/${songs[songindex]}.wav`;
+  info_nummer.innerText=`speelt nu: ${songindex+1}: ${songs[songindex]}`;  
+  sections[songindex+1].scrollIntoView();
 }
 
 function stopalbum (){
+  if (albumplaying==true) {
   albumaudio.pause();
   songindex=0;
+    albumplaying=false;
+    knop_stop.innerText='start';
+    info_nummer.innerText=''
+  sections[0].scrollIntoView();
+  }
+  else if (albumplaying==false) {
+    knop_stop.innerText='stop'
+    playalbum();
+  }
 }
 
 function pausealbum (){
 if (albumaudio.duration > 0 && !albumaudio.paused) {
-console.log("ikspeel");
   albumaudio.pause();
   knop_pause.innerText = "speel"
+  info_nummer.innerText=`gepauzeerd: ${songindex + 1}: ${songs[songindex]}`
 } else {
-    //Not playing...maybe paused, stopped or never played.
 knop_pause.innerText = "pauzeer"
 albumaudio.play();
+  info_nummer.innerText=`speelt nu: ${songindex+1}: ${songs[songindex]}`;  
 }
 }
 
@@ -50,6 +70,9 @@ function prevsong(){
 }
 
 function playalbum () {
+albumplaying=true;
+playermenu.style.display='flex';
+knop_pause.innerText = "pauzeer"
 playsong(songindex);
 albumaudio.play();
 albumaudio.addEventListener('ended', function() {
@@ -69,4 +92,5 @@ knop_prev.addEventListener('click', prevsong);
 knop_stop.addEventListener('click', stopalbum);
 knop_pause.addEventListener('click', pausealbum);
 knop_next.addEventListener('click', nextsong);
+knop_startalbum.addEventListener('click', playalbum);
 
