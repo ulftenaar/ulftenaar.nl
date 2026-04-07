@@ -78,6 +78,9 @@ border-radius: 1px;
 .randommedia {
   position: absolute;
     object-fit: cover;
+  /* width: min(60vw, 300px); */
+  /* height: min(60vh,300px); */
+  mix-blend-mode: soft-light;
 
   & img {
     object-fit: cover;
@@ -90,7 +93,7 @@ border-radius: 1px;
 .media{
   position: absolute;
   width: 100vw;
-
+  overflow: hidden;
   height: 100vh;
 }
 
