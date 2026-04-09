@@ -78,8 +78,6 @@ border-radius: 1px;
 .randommedia {
   position: absolute;
     object-fit: cover;
-  /* width: min(60vw, 300px); */
-  /* height: min(60vh,300px); */
   mix-blend-mode: soft-light;
 
   & img {
@@ -101,12 +99,26 @@ border-radius: 1px;
 .songtekst {
   position: relative;
 font-size: clamp(1rem, 1.5vw, 3rem);
+
+font-style: italic;
 }
 
 .infotekst {
   text-wrap:wrap ;
   max-width: 50vw;
   font-size: clamp(1rem, 1.5vw, 3rem);
+}
+
+.glitchtekst {
+max-width: 50vw;
+  font-size: clamp(1rem, 1.5vw, 3rem);
+  text-decoration: underline solid white 2px;
+
+
+}
+
+.glitchtekst:hover {
+  background-color: white;
 }
 
 .tekstsectie {
@@ -124,3 +136,10 @@ flex-wrap: wrap;
     left: 30vw;
   }
 }
+
+#sec7 {
+  .songtekst {
+    max-width: 30vw;
+font-size: clamp(0.7rem, 1.6vw, 2rem);
+  }
+} 
