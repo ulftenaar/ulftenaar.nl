@@ -86,15 +86,7 @@ playermenu.style.display='flex';
 knop_pause.innerText = "pauzeer"
 playsong(songindex);
 albumaudio.play();
-albumaudio.addEventListener('ended', function() {
-  songindex++;
-  playsong();
-  if (songindex > songs.length) {
-    stopalbum();
-    songindex=0;
-  }
-
-}  )
+  
 }
 
   randommedias.forEach(function (val, i, list) {
@@ -104,7 +96,15 @@ albumaudio.addEventListener('ended', function() {
   randommedias[i].style.height=`${((Math.random() *(vh*0.75)) + vh*0.1)}px`;
   // randommedias[i].style.mix_blend_mode=`${blendmodes[Math.floor(Math.random()*blendmodes.length)]}`;
 })
+albumaudio.addEventListener('ended', function() {
+  songindex++;
+  playsong();
+  if (songindex > songs.length) {
+    stopalbum();
+    songindex=0;
+  }
 
+})
 // buttons 
 
 knop_prev.addEventListener('click', prevsong);
