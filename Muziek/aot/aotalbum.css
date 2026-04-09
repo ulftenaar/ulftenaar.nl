@@ -95,6 +95,12 @@ border-radius: 1px;
   height: 100vh;
 }
 
+.startalbum {
+  width: 100vw;
+ cursor: pointer;
+  height: 100vw;
+}
+
 
 .songtekst {
   position: relative;

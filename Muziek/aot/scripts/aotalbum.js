@@ -12,6 +12,7 @@ const info_nummer = document.querySelector('#info_nummer');
 const playermenu = document.querySelector('.playermenu');
 const sections = document.querySelectorAll('[id^="sec"]')
 const randommedias = document.querySelectorAll('.randommedia')
+const achtergrondmuziek = document.querySelector('#achtergrondmuziek')
 
 let songindex =0;
 let albumplaying = false;
@@ -43,6 +44,7 @@ function stopalbum (){
     knop_stop.innerText='stop'
     playalbum();
   }
+  achtergrondmuziek.muted="false";
 }
 
 function pausealbum (){
@@ -78,6 +80,7 @@ function prevsong(){
 }
 
 function playalbum () {
+  achtergrondmuziek.muted="false";
 albumplaying=true;
 playermenu.style.display='flex';
 knop_pause.innerText = "pauzeer"
